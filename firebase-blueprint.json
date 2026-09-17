@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile containing authentication details, stats, and preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique user identifier from Firebase Auth" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Display name or chosen username" },
+        "photoURL": { "type": "string", "description": "Avatar image URL" },
+        "isAnonymous": { "type": "boolean", "description": "Whether the user is currently a guest" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Account creation timestamp" },
+        "lastActiveAt": { "type": "string", "format": "date-time", "description": "Last activity timestamp" },
+        "progress": { "type": "object", "description": "Map of topic keys to scores and timestamps" },
+        "stats": { "type": "object", "description": "Aggregated user statistics" }
+      },
+      "required": ["uid", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores user profile data, settings, and full test/star mastery records"
+    }
+  }
+}

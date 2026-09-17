@@ -1,0 +1,6 @@
+{
+  "name": "Vanguard iBT: Oxford, Cambridge & ETS English",
+  "description": "The premier adaptive English ecosystem engineered to ETS, Oxford 3000/5000, and Cambridge CEFR (A1–C2) academic standards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
